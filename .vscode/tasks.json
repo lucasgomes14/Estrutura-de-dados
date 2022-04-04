@@ -1,0 +1,39 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc arquivo de build ativo",
+			"command": "/usr/bin/gcc",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}/${fileBasenameNoExtension}"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compilador: /usr/bin/gcc"
+		},
+		{
+			"label" : "compilar [-g] & linkar fila.* > testar_fila",
+			"type" : "shell",
+			"command" : "gcc",
+			"args": [
+				"-Wall",
+				"-std=c99",
+				"-g",
+				"atividade/fila.h",
+				"atividade/fila.c",
+				"-o",
+				"atividade/testar_fila",
+			],
+		}
+	]
+}
